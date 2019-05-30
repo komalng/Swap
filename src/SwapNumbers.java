@@ -9,15 +9,8 @@ public class SwapNumbers {
     }
     public static List<Integer> getNumbers(List<Integer> numbers, int first, int second){
         int numberAtFirstIndex = numbers.get(first);
-        int numberAtSecondIndex = numbers.get(second);
-        for(int i = 0; i < numbers.size();i++){
-            if(numberAtFirstIndex == numbers.get(i)){
-                numbers.set(first,numberAtSecondIndex);
-            }
-            else if(numberAtSecondIndex == numbers.get(i)){
-                numbers.set(second, numberAtFirstIndex);
-            }
-        }
+        numbers.set(first,numbers.get(second));
+        numbers.set(second,numberAtFirstIndex);
         return numbers;
     }
 }
